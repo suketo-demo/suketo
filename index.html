@@ -56,16 +56,17 @@
   .hero{position:relative;height:100svh;min-height:600px;background:var(--sumi);color:#F2F2F0;overflow:hidden}
   .hero-media{position:absolute;inset:0;overflow:hidden}
   .hero-media video,.hero-media img{width:100%;height:100%;object-fit:cover}
-  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,10,10,.62) 0%,rgba(10,10,10,.25) 55%,rgba(10,10,10,.5) 100%)}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,8,8,.82) 0%,rgba(8,8,8,.35) 42%,rgba(8,8,8,.2) 60%,rgba(8,8,8,.55) 100%),linear-gradient(90deg,rgba(8,8,8,.35) 0%,rgba(8,8,8,0) 45%,rgba(8,8,8,.45) 100%)}
   .veil{position:absolute;inset:0;background:var(--sumi);z-index:2}
   .hero-inner{position:relative;z-index:3;height:100%;display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;padding-block:96px 56px}
-  .hero-lead{display:grid;gap:20px;align-self:end;max-width:30em}
-  .hero-lead p{margin:0;font-size:clamp(13px,1.2vw,15px);line-height:2.2;color:rgba(242,242,240,.86)}
-  .hero-lead .facts{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:12px;color:rgba(242,242,240,.7)}
+  .hero-lead{display:grid;gap:20px;align-self:end;max-width:38em}
+  .nb{display:inline-block}
+  .hero-lead p{margin:0;font-size:clamp(15px,1.35vw,17px);line-height:2.1;color:#FAFAF8;text-shadow:0 1px 14px rgba(0,0,0,.55)}
+  .hero-lead .facts{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:13.5px;color:rgba(250,250,248,.9);text-shadow:0 1px 10px rgba(0,0,0,.5)}
   .hero-lead .facts b{font-weight:500;color:#F2F2F0;margin-right:.6em}
   .hero-type{display:flex;flex-direction:row-reverse;gap:clamp(20px,3.5vw,48px);align-self:center}
-  .catch{margin:0;font-family:var(--mincho);font-weight:600;font-size:clamp(34px,5.6vw,72px);line-height:1.35;letter-spacing:.18em}
-  .shopname{margin:0;font-family:var(--mincho);font-weight:600;font-size:clamp(15px,1.5vw,19px);letter-spacing:.5em;color:rgba(242,242,240,.8);padding-top:.4em}
+  .catch{margin:0;font-family:var(--mincho);font-weight:600;font-size:clamp(38px,6vw,80px);line-height:1.45;letter-spacing:.16em;text-shadow:0 2px 24px rgba(0,0,0,.45)}
+  .shopname{margin:0;font-family:var(--mincho);font-weight:700;font-size:clamp(18px,2vw,24px);letter-spacing:.45em;color:#FAFAF8;padding-top:.3em;text-shadow:0 1px 14px rgba(0,0,0,.5)}
   .scroll{position:absolute;left:50%;bottom:18px;z-index:3;transform:translateX(-50%);display:grid;justify-items:center;gap:8px;font-family:var(--latin);font-size:10px;letter-spacing:.3em;color:rgba(242,242,240,.7)}
   .scroll i{width:1px;height:44px;background:rgba(242,242,240,.25);position:relative;overflow:hidden}
   .scroll i::after{content:"";position:absolute;left:0;top:-44px;width:1px;height:44px;background:#F2F2F0;animation:drip 2.2s var(--ease) infinite}
@@ -219,11 +220,11 @@
     <div class="veil" aria-hidden="true"></div>
     <div class="wrap hero-inner">
       <div class="hero-lead">
-        <p>徳島市助任本町の、自家焙煎の珈琲豆店です。<br>焼くのは火曜と金曜の朝。焼いてから三日目の、いちばんおいしいころにお渡しできるように。</p>
+        <p><span class="nb">だから、どの袋にも</span><span class="nb">焼いた日を書いてお渡しします。</span><br><span class="nb">徳島市助任本町の、</span><span class="nb">自家焙煎の珈琲豆店です。</span><span class="nb">焼くのは火曜と金曜の朝。</span></p>
         <div class="facts"><span><b>営業</b>10:00–18:00</span><span><b>定休</b>水曜・日曜</span><span><b>場所</b>助任橋から歩いて3分</span></div>
       </div>
       <div class="hero-type">
-        <h1 class="catch v" data-split>焼いた日を、<br>袋に書いて<br>渡します。</h1>
+        <h1 class="catch v" data-split>焼いて三日目が、<br>いちばんうまい。</h1>
         <p class="shopname v" data-split>助任珈琲豆店</p>
       </div>
     </div>
@@ -231,7 +232,7 @@
   </section>
 
   <section class="statement wrap" aria-label="店のこと">
-    <p data-glow>焼いてから三日目くらいが、いちばんおいしいと思っています。だから、どの袋にも焼いた日を書いています。</p>
+    <p data-glow>大阪で八年、豆を焼いてきました。生まれ育った助任に戻って、川沿いのこの場所で焼いています。</p>
     <span class="note">— ROASTER, HIRAOKA</span>
   </section>
 
@@ -353,10 +354,10 @@
           <div class="reveal-img" data-reveal><img src="assets/hands.webp" alt="焙煎機の受け皿で、木べらを使って豆を混ぜる手。" width="1100" height="1650" loading="lazy" decoding="async" data-parallax></div>
         </figure>
         <div class="letter">
-          <p class="quote" data-fade>焼いてから三日目くらいが、<br>いちばんおいしいと思っています。</p>
-          <p data-fade>はじめまして、店主の平岡です。大阪の焙煎所で8年、豆を焼いてきました。2021年に生まれ育った徳島へ戻り、この店を開きました。</p>
+          <p class="quote" data-fade>豆は、話しながら<br>一緒に選びたいと思っています。</p>
+          <p data-fade>はじめまして、店主の平岡です。大阪の焙煎所で8年働いたあと、2021年に生まれ育った徳島へ戻り、この店を開きました。焼いてから三日目くらいがいちばんおいしいと思っているので、袋にはかならず焼いた日を書いています。</p>
           <p data-fade>子どものころ、助任川沿いの道を歩いて学校に通っていました。店の名前は、そこから迷わず決めました。</p>
-          <p data-fade>豆は、お客さんと話しながら一緒に選びたいと思っています。「いつもより少し濃いのがいい」くらいの言い方で大丈夫です。</p>
+          <p data-fade>好みを言葉にするのは、むずかしいものです。「いつもより少し濃いのがいい」くらいの言い方で大丈夫です。</p>
           <div class="sign" data-fade><span class="label">Roaster</span><b>平岡 修</b></div>
         </div>
       </div>
